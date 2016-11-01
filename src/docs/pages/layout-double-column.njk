@@ -1,0 +1,33 @@
+{% extends "base.njk" %}
+
+{% block content %}
+
+  {% include "header.njk" %}
+
+  <header>
+    <h1>Header</h1>
+    <p>The HTML (header) element represents a group of introductory or navigational aids. It may contain some heading elements but also other elements like a logo, wrapped section's header, a search form, and so on.</p>
+  </header>
+  <main role="main">
+    <article role="article">
+      <h1>Article</h1>
+      <p>The article element represents a section of content that forms an independent part of a document or site; for example, a magazine or newspaper article, or a blog entry. The article element is a good choice to contain entire blog posts, news articles, and similar content.</p>
+      <p>This is the outline of the current layout:</p>
+<figure><pre><code>&lt;body&gt;
+  &lt;header&gt;
+  &lt;main&gt;
+  &lt;aside&gt;
+  &lt;footer&gt;
+&lt;/body&gt;</code></pre></figure>
+    </article>
+  </main>
+  <aside role="complementary">
+    <h1>Aside</h1>
+    <p>The HTML (aside) element represents a section of the page with content connected tangentially to the rest, which could be considered separate from that content. These sections are often represented as sidebars or inserts. They often contain the definitions on the sidebars, such as definitions from the glossary; there may also be other types of information, such as related advertisements.</p>
+  </aside>
+  <footer>
+    <h1>Footer</h1>
+    <p>The HTML (footer) element represents a footer for its nearest sectioning content or sectioning root element. A footer typically contains information about the author of the section, copyright data or links to related documents.</p>
+  </footer>
+
+{% endblock %}

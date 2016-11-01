@@ -1,0 +1,6 @@
+/**
+ * hyper-auto-layout
+ * https://heyallan.github.io/hyper-auto-layout/
+ * License MIT Copyright (c) 2016-2016
+ */
+body{margin-right:auto;margin-left:auto;padding:2rem 1rem 3rem;max-width:900px;display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-align:stretch;align-items:stretch;-ms-flex-pack:center;justify-content:center}body *{min-width:0}body>*{-ms-flex-positive:1;flex-grow:1;-ms-flex-negative:0;flex-shrink:0;-ms-flex-preferred-size:calc(70% - 1rem);flex-basis:calc(70% - 1rem);padding-right:.5rem;padding-left:.5rem;max-width:100%}body>aside{-ms-flex-positive:1;flex-grow:1;-ms-flex-negative:0;flex-shrink:0;-ms-flex-preferred-size:calc(30% - 1rem);flex-basis:calc(30% - 1rem);min-width:calc(260.4px - 5%)}
