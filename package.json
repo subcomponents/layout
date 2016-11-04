@@ -1,7 +1,7 @@
 {
   "name": "hyper-auto-layout",
-  "version": "1.0.0",
-  "description": "CSS auto layout",
+  "version": "1.0.1",
+  "description": "CSS layout without classes",
   "repository": {
     "type": "git",
     "url": "https://github.com/heyallan/hyper-auto-layout.git",
