@@ -1,11 +1,11 @@
 {
-  "name": "hyper-auto-layout",
-  "version": "1.0.2",
+  "name": "hyper-layout",
+  "version": "1.0.4",
   "description": "CSS layout without classes",
   "repository": {
     "type": "git",
-    "url": "https://github.com/heyallan/hyper-auto-layout.git",
-    "home": "https://github.com/heyallan/hyper-auto-layout/"
+    "url": "https://github.com/heyallan/hyper-layout.git",
+    "home": "https://github.com/heyallan/hyper-layout/"
   },
   "keywords": [
     "html",
@@ -21,9 +21,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/heyallan/hyper-auto-layout/issues"
+    "url": "https://github.com/heyallan/hyper-layout/issues"
   },
-  "homepage": "https://heyallan.github.io/hyper-auto-layout/",
+  "homepage": "https://heyallan.github.io/hyper-layout/",
   "devDependencies": {
     "autoprefixer": "^6.4.1",
     "gulp": "^3.9.1",

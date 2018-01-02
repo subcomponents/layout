@@ -2,37 +2,23 @@
 <html lang="en-US" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>hyper-auto-layout - CSS layout without classes</title>
+    <title>hyper-layout - CSS layout without classes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/hyper-reset/dist/hyper-reset.min.css"/>
     <link rel="stylesheet" href="https://unpkg.com/hyper-properties/dist/hyper-properties.min.css"/>
-    <link rel="stylesheet" href="hyper-auto-layout.min.css"/>
+    <link rel="stylesheet" href="hyper-layout.min.css"/>
   </head>
   <body>
     
 
   <header role="banner">
-  <h1>
-    
-    <svg width="38" height="30" viewBox="0 0 38 30" style="margin-top:5px;transform:translateY(4px);">
-      <defs>
-        <linearGradient id="gradient">
-          <stop offset="0%"  stop-color="#3498db"/>
-          <stop offset="70%" stop-color="#9b59b6"/>
-        </linearGradient>
-      </defs>
-      <text x="0" y="40" fill="url(#gradient)" style="font-weight:700;font-size:60px;">
-        ◮
-      </text>
-    </svg>
-    {hyper-auto-layout}
-  </h1>
+  <h1>{{ hyper-layout }}</h1>
   <nav role="navigation">
   <a href="./">Home</a>
   /
   <a href="./layout-usage.html">Layout</a>
   /
-  <a href="https://github.com/heyallan/hyper-auto-layout.git">Repository</a>
+  <a href="https://github.com/heyallan/hyper-layout.git">Repository</a>
   /
   Author
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300.00006 244.18703" width="15">
@@ -47,12 +33,12 @@
     <section>
       <h2>Single column</h2>
       <p><strong>Demo:</strong> <a href="./layout-single-column.html">Single column example</a></p>
-      <p>A single column layout is default, it works out of the box, no setup, no configuration.</p>
+      <p>Single column layout is default.</p>
     </section>
     <section>
       <h2>Double column</h2>
       <p><strong>Demo:</strong> <a href="./layout-double-column.html">Double column example</a></p>
-      <p><strong>Required:</strong> 1 Container (<code>&lt;body&gt;</code>) > 1 sidebar (<code>&lt;aside&gt;</code>)</p>
+      <p><strong>Required:</strong> <code>body &gt; (main + aside)</code></p>
       <p><strong>Example:</strong></p>
 <pre><code>body                                          body
 +----------------------------+                +----------------------------+
@@ -70,15 +56,8 @@
                                               +----------------------------+</code></pre>
     </section>
     <section>
-      <h2>Rationale</h2>
-      <p>If container (<code>&lt;body&gt;</code>) has a sidebar (<code>&lt;aside&gt;</code>) the layout will work automagically.</p>
-      <p>The order of elements does not matter. Neither additional elements.</p>
-      <p>Elements align using <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">flexbox properties</a> instead of <a href="https://developer.mozilla.org/en/docs/Web/CSS/Adjacent_sibling_selectors">adjacent sibling selectors</a>. Flexbox allows elements to align in a pseudo-dynamic fashion as opposed to sibling selectors which are rigid by nature.</p>
-      <p>As seen on the example <code>&lt;header&gt;</code> and <code>&lt;footer&gt;</code> (or any other) are irrelevant, <strong>they don't affect the layout</strong>.</p>
-    </section>
-    <section>
-      <h2>Fallback</h2>
-      <p>A single column will be rendered if the <code>&lt;aside&gt;</code> is not a direct descendant of the container, or if there is no <code>&lt;aside&gt;</code> in the document.</p>
+      <h2>Notes</h2>
+      <p>Elements align using <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">flexbox properties</a> instead of <a href="https://developer.mozilla.org/en/docs/Web/CSS/Adjacent_sibling_selectors">adjacent sibling selectors</a>. A single column will be rendered if the <code>&lt;aside&gt;</code> is not a direct descendant of the <code>&lt;body&gt;</code>, or if there is no <code>&lt;aside&gt;</code> at all.</p>
     </section>
   </article>
 
