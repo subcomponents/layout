@@ -1,0 +1,11 @@
+<nav role="navigation">
+  {% if navWrapper %}<{{ navWrapper }}>{% endif %}
+    <a href="{{ baseURL }}/">Home</a>
+    &nbsp;|&nbsp;
+    <a href="{{ baseURL }}/landing-page/">Landing Page</a>
+    ·
+    <a href="{{ baseURL }}/single-column/">Single Column</a>
+    ·
+    <a href="{{ baseURL }}/double-column/">Double Column</a>
+  {% if navWrapper %}</{{ navWrapper }}>{% endif %}
+</nav>

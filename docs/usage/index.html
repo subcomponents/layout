@@ -34,23 +34,43 @@
 
     
 
-    <main role="main">
-      <section>
-        <p><b>CSS layout without classes</b></p>
-        <figure><img src="https://heyallan.github.io/hyper-layout/screenshot.png?t=1527550604202" alt="screen shot"></figure>
-      </section>
-      <section>
-        <h2>Install</h2>
-<p>CDN Development (redirect to latest):</p>
-<pre><code>&lt;link rel="stylesheet" href="https://unpkg.com/hyper-auto-layout/dist/layout.min.css"/&gt;</code></pre>
-<p>CDN Production (specific release):</p>
-<pre><code>&lt;link rel="stylesheet" href="https://unpkg.com/hyper-auto-layout@1.1.0/dist/layout.min.css"/&gt;</code></pre>
-<p>NPM package:</p>
-<pre><code>$ npm install --save-dev hyper-auto-layout</code></pre>
-<p>CSS import:</p>
-<pre><code>@import url(&quot;https://unpkg.com/hyper-auto-layout@1.1.0/dist/layout.min.css&quot;);</code></pre>
-      </section>
-    </main><!-- role main -->
+<main>
+  <h2>One column (Default)</h2>
+  <p>Render one-column layout if the following elements exist <code>body>main</code></p>
+<pre><code>&lt;body&gt;
+  &lt;main&gt;
+&lt;/body&gt;</code></pre>
+
+  <h2>Two column (Optional)</h2>
+  <p>Render two-column layout if the following elements exist <code>body>(main+aside)</code></p>
+<pre><code>&lt;body&gt;
+  &lt;main&gt;
+  &lt;aside&gt;
+&lt;/body&gt;</code></pre>
+
+  <h2>About adjacent elements</h2>
+  <p>Adjacent elements are not expected to affect the layout <code>body>(any)+(main+aside)+(any)</code> is permitted</p>
+<pre><code>&lt;body&gt;
+  ...
+  &lt;main&gt;
+  &lt;aside&gt;
+  ...
+&lt;/body&gt;</code></pre>
+
+  <h2>Top navbar (optional)</h2>
+  <p>Render responsive top navbar if the following elements exist <code>body>nav</code></p>
+<pre><code>&lt;body&gt;
+  &lt;nav&gt;
+  ...
+  ...
+&lt;/body&gt;</code></pre>
+
+  <h2>Good practice</h2>
+  <p>Don't place <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Text_content">text elements</a> directly under the <code>body</code>. Instead group them inside <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Content_sectioning">content sectioning</a> elements.</p>
+  <p><strong>NO</strong>: <code>body>(p+p+p+p)</code></p>
+  <p><strong>YES</strong>: <code>body>(header>p)+(main>article>p)+(footer>p)</code></p>
+  <p><strong>YES</strong>: <code>body>(section>p)+(section>p)+(section>p)</code></p>
+</main>
 
 
 

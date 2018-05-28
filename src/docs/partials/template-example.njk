@@ -6,11 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/hyper-reset/dist/hyper-reset.min.css"/>
     <link rel="stylesheet" href="https://unpkg.com/hyper-properties/dist/hyper-properties.min.css"/>
-    <link rel="stylesheet" href="{{ package.name }}.min.css"/>
+    <link rel="stylesheet" href="{{ baseURL }}/{{ package.name }}.min.css?t={{ timestamp }}"/>
   </head>
   <body>
+
+    {% set navWrapper = "center" %}
+
+    {% include "component-nav-example.njk" %}
+
     {% block content %}
       {# content will be injected here #}
     {% endblock %}
+
   </body>
 </html>

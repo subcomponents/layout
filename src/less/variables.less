@@ -1,0 +1,10 @@
+@container-width: 900px;
+@container-padding-x: 1rem;
+@container-padding-y: 2rem;
+@container-padding-px: unit(@container-padding-x) * 1rem;
+
+@column-basis-width: 70%;
+@column-padding: 0.5rem;
+
+@sidebar-basis-width: 30%;
+@sidebar-basis-width-px: ((@container-width - (@container-padding-px * 2)) / 100) * unit(@sidebar-basis-width);
