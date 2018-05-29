@@ -1,10 +1,10 @@
 {
-  "name": "hyper-auto-layout",
-  "version": "1.1.3",
+  "name": "hyper-layout-css",
+  "version": "1.1.4",
   "description": "CSS layout without classes",
   "repository": {
     "type": "git",
-    "url": "https://github.com/heyallan/hyper-layout.git"
+    "url": "https://github.com/heyallan/hyper-layout-css.git"
   },
   "keywords": [
     "html",
@@ -22,14 +22,15 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/heyallan/hyper-layout/issues"
+    "url": "https://github.com/heyallan/hyper-layout-css/issues"
   },
-  "homepage": "https://heyallan.github.io/hyper-layout",
+  "homepage": "https://heyallan.github.io/hyper-layout-css",
+  "main": "dist/layout.min.css",
   "repo": {
-    "url": "https://github.com/heyallan/hyper-layout"
+    "url": "https://github.com/heyallan/hyper-layout-css"
   },
   "demo": {
-    "url": "https://heyallan.github.io/hyper-layout"
+    "url": "https://heyallan.github.io/hyper-layout-css"
   },
   "keyword": "layout",
   "scope": "@hypercss",
