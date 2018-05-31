@@ -2,39 +2,38 @@ body {
   // positioning
   margin-right: auto;
   margin-left: auto;
-  padding: 2rem 1rem 3rem;
-  max-width: @container-width;
+  padding: @body-padding-y @body-padding-x;
+  max-width: @body-width;
 
   // flexbox container
   display: flex;
   flex-direction: row;
   flex-wrap: wrap; // wrap children when shrinked beyond min-width
   align-items: stretch; // stretch children full height
-  justify-content: center; // center children horizontally
-  * { min-width: 0; } // $fix: make descendents of flex items respect overflow property (specially `pre`)
 
   // flexbox items
   > * {
-    padding-right: @column-padding;
-    padding-left: @column-padding;
+    // sectioning items
+    padding-right: @content-padding;
+    padding-left: @content-padding;
     flex-grow: 1;
     flex-shrink: 0;
-    flex-basis: calc(100% ~"-" (@column-padding * 2)); // $fix: substract padding
+    flex-basis: @content-flex-basis;
     max-width: 100%;
   }
 
   > main {
-    flex-basis: calc(@column-basis-width ~"-" (@column-padding * 2)); // $fix: substract padding width for IE11
-    min-width: calc(@column-basis-width ~"-" 5%); // wrap column if it shrinks more than 5% of its width
+    flex-basis: @main-flex-basis;
+    min-width: 0; // flex items need min-width to shrink and wrap properly
   }
 
   > aside {
-    flex-basis: calc(@sidebar-basis-width ~"-" (@column-padding * 2)); // $fix: substract padding width for IE11
-    min-width: calc(@sidebar-basis-width-px ~"-" 5%); // wrap column if it shrinks more than 5% of its width
+    flex-basis: @aside-flex-basis;
+    min-width: @aside-min-width; // wrap if shrinks more than min-width
   }
 
   > nav:first-child  {
-    margin-top: -@container-padding-y;
+    margin-top: -@body-padding-y;
     padding-top: 1rem;
     padding-bottom: 1rem;
     border-bottom: 1px solid var(--color-gray);
@@ -43,6 +42,3 @@ body {
     white-space: nowrap;
   }
 }
-
-// $fix: substract padding
-// because IE11 counts padding as part of the element width

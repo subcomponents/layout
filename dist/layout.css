@@ -2,16 +2,12 @@
 body {
   margin-right: auto;
   margin-left: auto;
-  padding: 2rem 1rem 3rem;
+  padding: 2rem 1rem;
   max-width: 900px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: stretch;
-  justify-content: center;
-}
-body * {
-  min-width: 0;
 }
 body > * {
   padding-right: 0.5rem;
@@ -23,11 +19,11 @@ body > * {
 }
 body > main {
   flex-basis: calc(70% - 1rem);
-  min-width: calc(70% - 5%);
+  min-width: 0;
 }
 body > aside {
   flex-basis: calc(30% - 1rem);
-  min-width: calc(269.4px - 5%);
+  min-width: calc(calc(calc(calc(900px - calc(2rem)) * 0.3) - calc(0.5rem * 2)) - 1rem);
 }
 body > nav:first-child {
   margin-top: -2rem;

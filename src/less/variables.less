@@ -1,10 +1,20 @@
-@container-width: 900px;
-@container-padding-x: 1rem;
-@container-padding-y: 2rem;
-@container-padding-px: unit(@container-padding-x) * 1rem;
+@body-width: 900px;
+@body-padding-x: 1rem;
+@body-padding-y: 2rem;
+@body-padding-px: unit(@body-padding-x) * 1rem; // 1rem
 
-@column-basis-width: 70%;
-@column-padding: 0.5rem;
+@main-width:  70%;
+@aside-width: 30%;
 
-@sidebar-basis-width: 30%;
-@sidebar-basis-width-px: ((@container-width - (@container-padding-px * 2)) / 100) * unit(@sidebar-basis-width);
+@content-padding: 0.5rem; // IE11 counts padding as part of the element width
+@content-flex-basis: calc(100% ~"-" (@content-padding * 2));
+
+@main-flex-basis: calc(@main-width ~"-" (@content-padding * 2));
+@main-min-width:  calc(@main-width ~"-" 5%);
+
+@aside-flex-basis: calc(@aside-width ~"-" (@content-padding * 2));
+
+@effective-body-width: calc(@body-width ~"-" calc(@body-padding-x * 2));
+@effective-aside-width: calc(calc(@effective-body-width ~"*" 0.3) ~"-" calc(@content-padding ~"*" 2));
+
+@aside-min-width: calc(@effective-aside-width ~"-" 1rem);
