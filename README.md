@@ -1,4 +1,4 @@
-# hyper-auto-layout
+# hyper-layout
 
 > CSS layout without classes
 
