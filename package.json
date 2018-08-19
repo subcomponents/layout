@@ -1,6 +1,6 @@
 {
   "name": "hyper-layout-css",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "CSS layout without classes",
   "repository": {
     "type": "git",
