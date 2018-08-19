@@ -1,11 +1,12 @@
 {
   "name": "hyper-layout-css",
-  "version": "1.1.6",
+  "version": "1.2.0",
   "description": "CSS layout without classes",
   "repository": {
     "type": "git",
     "url": "https://github.com/heyallan/hyper-layout-css.git"
   },
+  "abstract": "Render one column, or two columns, according to markup. No classes. Default one column.",
   "keywords": [
     "html",
     "css",
@@ -16,8 +17,8 @@
   "author": {
     "username": "heyallan",
     "twitter": {
-      "url": "https://twitter.com/heyallanmoreno",
-      "username": "heyallanmoreno"
+      "username": "heyallanmoreno",
+      "url": "https://twitter.com/heyallanmoreno"
     }
   },
   "license": "MIT",
@@ -29,20 +30,16 @@
   "repo": {
     "url": "https://github.com/heyallan/hyper-layout-css"
   },
-  "demo": {
-    "url": "https://heyallan.github.io/hyper-layout-css"
-  },
   "keyword": "layout",
-  "scope": "@hypercss",
+  "scope": "@metacss",
   "devDependencies": {
+    "browser-sync": "^2.24.6",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-header": "^2.0.5",
     "gulp-less": "^3.5.0",
     "gulp-minify-css": "^1.2.4",
     "gulp-nunjucks-render": "^2.2.2",
-    "gulp-rename": "^1.2.2",
-    "gulp-sourcemaps": "^2.6.4",
-    "yargs": "^11.0.0"
+    "gulp-rename": "^1.2.2"
   }
 }

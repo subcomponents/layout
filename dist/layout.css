@@ -1,36 +1,79 @@
-/** hyper-layout-css | https://heyallan.github.io/hyper-layout-css */
+/** (C) License MIT | https://github.com/heyallan/hyper-layout-css */
+
+:root {
+  --body-width: 960px;
+  --body-padding-x: 1rem;
+  --body-padding-y: 2rem;
+  --content-width-md: 60%;
+  --sidebar-width-md: 40%;
+  --content-width-lg: 70%;
+  --sidebar-width-lg: 30%;
+}
+address,
+article,
+aside,
+blockquote,
+dd,
+div,
+dl,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+hr,
+main,
+nav,
+ol,
+output,
+p,
+pre,
+section,
+table,
+tfoot,
+ul,
+video {
+  flex-basis: auto;
+  width: 100%;
+}
 body {
   margin-right: auto;
   margin-left: auto;
-  padding: 2rem 1rem;
-  max-width: 900px;
+  padding: var(--body-padding-y) var(--body-padding-x);
+  max-width: var(--body-width);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: stretch;
+  align-items: baseline;
 }
-body > * {
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
+main,
+aside {
   flex-grow: 1;
   flex-shrink: 0;
-  flex-basis: calc(100% - 1rem);
-  max-width: 100%;
 }
-body > main {
-  flex-basis: calc(70% - 1rem);
-  min-width: 0;
+@media all and (min-width: 700px) {
+  aside + main,
+  main + aside {
+    padding-left: 1rem;
+  }
+  main {
+    width: var(--content-width-md);
+  }
+  aside {
+    width: var(--sidebar-width-md);
+  }
 }
-body > aside {
-  flex-basis: calc(30% - 1rem);
-  min-width: calc(calc(calc(calc(900px - calc(2rem)) * 0.3) - calc(0.5rem * 2)) - 1rem);
-}
-body > nav:first-child {
-  margin-top: -2rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid var(--color-gray);
-  min-width: 0;
-  overflow-x: scroll;
-  white-space: nowrap;
+@media all and (min-width: 900px) {
+  main {
+    width: var(--content-width-lg);
+  }
+  aside {
+    width: var(--sidebar-width-lg);
+  }
 }

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/hyper-reset-css"/>
     <link rel="stylesheet" href="https://unpkg.com/hyper-properties-css"/>
-    <link rel="stylesheet" href="https://heyallan.github.io/hyper-layout-css/layout.min.css"/>
+    <link rel="stylesheet" href="./layout.min.css"/>
   </head>
   <body>
 
@@ -14,11 +14,11 @@
   <h1>@hyper-layout-css</h1>
   <nav role="navigation">
   
-  <a href="https://heyallan.github.io/hyper-layout-css/">Home</a>
+  <a href="./">Home</a>
   ·
-  <a href="https://heyallan.github.io/hyper-layout-css/usage/">Usage</a>
+  <a href="./usage.html">Usage</a>
   ·
-  <a href="https://heyallan.github.io/hyper-layout-css/examples/">Examples</a>
+  <a href="./examples.html">Examples</a>
   ·
   <a href="https://github.com/heyallan/hyper-layout-css">Repository</a>
   ·
@@ -35,41 +35,21 @@
     
 
 <main>
-  <h2>One column (Default)</h2>
-  <p>Render one-column layout if the following elements exist <code>body>main</code></p>
-<pre><code>&lt;body&gt;
-  &lt;main&gt;
-&lt;/body&gt;</code></pre>
-
-  <h2>Two column (Optional)</h2>
-  <p>Render two-column layout if the following elements exist <code>body>(main+aside)</code></p>
-<pre><code>&lt;body&gt;
-  &lt;main&gt;
-  &lt;aside&gt;
-&lt;/body&gt;</code></pre>
-
-  <h2>About adjacent elements</h2>
-  <p>Adjacent elements are not expected to affect the layout <code>body>(any)+(main+aside)+(any)</code> is permitted</p>
-<pre><code>&lt;body&gt;
-  ...
-  &lt;main&gt;
-  &lt;aside&gt;
-  ...
-&lt;/body&gt;</code></pre>
-
-  <h2>Top navbar (optional)</h2>
-  <p>Render responsive top navbar if the following elements exist <code>body>nav</code></p>
-<pre><code>&lt;body&gt;
-  &lt;nav&gt;
-  ...
-  ...
-&lt;/body&gt;</code></pre>
-
-  <h2>Good practice</h2>
-  <p>Don't place <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Text_content">text elements</a> directly under the <code>body</code>. Instead group them inside <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Content_sectioning">content sectioning</a> elements.</p>
-  <p><strong>NO</strong>: <code>body>(p+p+p+p)</code></p>
-  <p><strong>YES</strong>: <code>body>(header>p)+(main>article>p)+(footer>p)</code></p>
-  <p><strong>YES</strong>: <code>body>(section>p)+(section>p)+(section>p)</code></p>
+  <h2>Examples</h2>
+  <ul>
+    <li><a href="./example-default.html">Default</a></li>
+    <li><a href="./example-sidebar-right.html">Sidebar right</a></li>
+    <li><a href="./example-sidebar-left.html">Sidebar left</a></li>
+    <li><a href="./example-marketing.html">Marketing page</a></li>
+  </ul>
+  <h2>Playground</h2>
+  <p>Open demos in <a href="https://thimble.mozilla.org/">Mozilla Thimble</a> playground:</p>
+  <ul>
+    <li><a target="_blank" href="https://thimbleprojects.org/heyallan/526955/">Default</a></li>
+    <li><a target="_blank" href="https://thimbleprojects.org/heyallan/526957/">Sidebar right</a></li>
+    <li><a target="_blank" href="https://thimbleprojects.org/heyallan/526958/">Sidebar left</a></li>
+    <li><a target="_blank" href="https://thimbleprojects.org/heyallan/526960/">Marketing page</a></li>
+  </ul>
 </main>
 
 

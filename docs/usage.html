@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/hyper-reset-css"/>
     <link rel="stylesheet" href="https://unpkg.com/hyper-properties-css"/>
-    <link rel="stylesheet" href="https://heyallan.github.io/hyper-layout-css/layout.min.css"/>
+    <link rel="stylesheet" href="./layout.min.css"/>
   </head>
   <body>
 
@@ -14,11 +14,11 @@
   <h1>@hyper-layout-css</h1>
   <nav role="navigation">
   
-  <a href="https://heyallan.github.io/hyper-layout-css/">Home</a>
+  <a href="./">Home</a>
   ·
-  <a href="https://heyallan.github.io/hyper-layout-css/usage/">Usage</a>
+  <a href="./usage.html">Usage</a>
   ·
-  <a href="https://heyallan.github.io/hyper-layout-css/examples/">Examples</a>
+  <a href="./examples.html">Examples</a>
   ·
   <a href="https://github.com/heyallan/hyper-layout-css">Repository</a>
   ·
@@ -35,13 +35,38 @@
     
 
 <main>
-  <h2>Examples</h2>
-  <ul>
-    <li><a href="https://heyallan.github.io/hyper-layout-css/examples/single-column">Single column - no sidebar</a></li>
-    <li><a href="https://heyallan.github.io/hyper-layout-css/examples/column-right">Double column - sidebar right</a></li>
-    <li><a href="https://heyallan.github.io/hyper-layout-css/examples/column-left">Double column - sidebar left</a></li>
-    <li><a href="https://heyallan.github.io/hyper-layout-css/examples/marketing-page">Marketing page</a></li>
-  </ul>
+  <section>
+    <h2>One column (Default)</h2>
+    <p>Render one-column layout if the following elements exist <code>body>(any)</code></p>
+<pre><code>&lt;body&gt;
+  (any)
+&lt;/body&gt;</code></pre>
+  </section>
+  <section>
+    <h2>Two column (Optional)</h2>
+    <p>Render two-column layout if the following elements exist <code>body>(main+aside)</code></p>
+<pre><code>&lt;body&gt;
+  &lt;main&gt;
+  &lt;aside&gt;
+&lt;/body&gt;</code></pre>
+  </section>
+  <section>
+    <h2>About adjacent elements</h2>
+    <p>Adjacent elements are not expected to affect the layout <code>body>(any)+(main+aside)+(any)</code> </p>
+<pre><code>&lt;body&gt;
+  ...
+  &lt;main&gt;
+  &lt;aside&gt;
+  ...
+&lt;/body&gt;</code></pre>
+  </section>
+  <section>
+    <h2>Note</h2>
+    <p>For consistency <strong>always</strong> group <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Inline_text_semantics">inline and text elements</a> under <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Content_sectioning">block sectioning elements</a>. Do not place inline elements directly under <code>body</code>.</p>
+    <p><strong>NO</strong> <code>body>p+p+p</code></p>
+    <p><strong>YES</strong> <code>body>(header>p)+(main>p)+(footer>p)</code></p>
+    <p><strong>YES</strong> <code>body>(section>p)+(section>p)+(section>p)</code></p>
+  </section>
 </main>
 
 

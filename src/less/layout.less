@@ -1,44 +1,32 @@
+// reset
+address,article,aside,blockquote,dd,div,dl,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,hr,main,nav,ol,output,p,pre,section,table,tfoot,ul,video {
+  flex-basis: auto;
+  width: 100%;
+}
 body {
   // positioning
   margin-right: auto;
   margin-left: auto;
-  padding: @body-padding-y @body-padding-x;
-  max-width: @body-width;
-
+  padding: var(--body-padding-y) var(--body-padding-x);
+  max-width: var(--body-width);
   // flexbox container
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap; // wrap children when shrinked beyond min-width
-  align-items: stretch; // stretch children full height
-
-  // flexbox items
-  > * {
-    // sectioning items
-    padding-right: @content-padding;
-    padding-left: @content-padding;
-    flex-grow: 1;
-    flex-shrink: 0;
-    flex-basis: @content-flex-basis;
-    max-width: 100%;
-  }
-
-  > main {
-    flex-basis: @main-flex-basis;
-    min-width: 0; // flex items need min-width to shrink and wrap properly
-  }
-
-  > aside {
-    flex-basis: @aside-flex-basis;
-    min-width: @aside-min-width; // wrap if shrinks more than min-width
-  }
-
-  > nav:first-child  {
-    margin-top: -@body-padding-y;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid var(--color-gray);
-    min-width: 0;
-    overflow-x: scroll;
-    white-space: nowrap;
-  }
+  flex-wrap: wrap; // break row when shrinked
+  align-items: baseline; // keep natural align baseline
+}
+main,
+aside {
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+@media all and (min-width: 700px) {
+  aside + main,
+  main + aside { padding-left: 1rem; }
+  main  { width: var(--content-width-md); }
+  aside { width: var(--sidebar-width-md); }
+}
+@media all and (min-width: 900px) {
+  main  { width: var(--content-width-lg); }
+  aside { width: var(--sidebar-width-lg); }
 }
