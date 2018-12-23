@@ -1,16 +1,10 @@
 <!doctype html>
 <html lang="en-US" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>{{ package.name }} - {{ package.description }}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unpkg.com/hyper-reset-css/dist/reset.min.css"/>
-    <link rel="stylesheet" href="https://unpkg.com/hyper-properties-css/dist/properties.min.css"/>
-    <link rel="stylesheet" href="./{{ package.keyword }}.min.css"/>
-  </head>
+  {% include "head.njk" %}
+  <body>
   <body>
 
-    {% include "component-nav-example.njk" %}
+    {% include "nav-example.njk" %}
 
     {% block content %}
       {# content will be injected here #}

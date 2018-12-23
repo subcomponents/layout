@@ -3,7 +3,7 @@
 ![License][LicenseBadgeURL]
 [![Donate][DonateBadgeURL]][DonateURL]
 
-> CSS layout without classes
+> CSS layout
 
 ## Documentation
 

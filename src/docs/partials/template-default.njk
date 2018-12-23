@@ -1,25 +1,35 @@
 <!doctype html>
 <html lang="en-US" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>{{ package.name }} - {{ package.description }}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unpkg.com/hyper-reset-css"/>
-    <link rel="stylesheet" href="https://unpkg.com/hyper-properties-css"/>
-    <link rel="stylesheet" href="./{{ package.keyword }}.min.css"/>
-  </head>
+  {% include "head.njk" %}
   <body>
 
-    {% include "component-header-default.njk" %}
+    <header>
+      <h1>@{{ package.name }} <span class="color-primary">v{{ package.version }}</span></h1>
+      {% include "nav-default.njk" %}
+    </header>
 
     {% block content %}
       {# content will be injected here #}
     {% endblock %}
 
-    {% include "component-footer-default.njk" %}
+    <footer>
+      <hr>
+      <center>
+        This library is part of
+        <nav>
+          <a href="https://www.github.com/heyallan/hyper-reset-css">@hyper-reset-css</a>
+          ·
+          <a href="https://www.github.com/heyallan/hyper-layout-css">@hyper-layout-css</a>
+          ·
+          <a href="https://www.github.com/heyallan/hyper-grid-css">@hyper-grid-css</a>
+          ·
+          <a href="https://www.github.com/heyallan/hyper-properties-css">@hyper-properties-css</a>
+        </nav>
+      </center>
+    </footer>
 
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/3.2.1/anchor.min.js"></script>
-    <script type="text/javascript">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/3.2.1/anchor.min.js"></script>
+    <script>
       anchors.options = {placement:'left', icon: '#'};
       anchors.add('h1[id],h2[id],h3[id]');
     </script>
