@@ -12,6 +12,7 @@ var browserSync  = require('browser-sync').create();
 var fs           = require('fs');
 var banner       = ['/** <%= package.repo.url %> */\n\n'];
 
+// get filezise in bytes
 var size = fs.statSync('./dist/layout.css').size;
 var i = Math.floor( Math.log(size) / Math.log(1024) );
 var fileSize = ( size / Math.pow(1024, i) ).toFixed(2) * 1 + ' ' + ['B', 'KB', 'MB', 'GB', 'TB'][i];
