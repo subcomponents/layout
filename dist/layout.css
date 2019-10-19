@@ -1,15 +1,16 @@
-/** https://github.com/heyallan/hyper-layout-css */
-
+/** https://github.com/heyallan/hyper-layout-css 1.4.1 */
 :root {
   --gap: 1rem;
   --main-width: 70%;
   --aside-width: 30%;
+  --body-max-width: 960px;
 }
 
 body {
   margin: 1rem auto;
   padding: 0 1rem;
   max-width: 960px;
+  max-width: var(--body-max-width);
 }
 
 @media (min-width: 850px) {

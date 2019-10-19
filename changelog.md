@@ -1,5 +1,10 @@
 # changelog
 
+## 1.4.1
+
+- add body-max-width variable
+- add verson num to export file
+
 ## 1.4.0
 
 - use css variables
