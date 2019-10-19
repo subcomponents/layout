@@ -41,7 +41,7 @@
   </section>
   <section>
     <h2>Two column</h2>
-    <p>Render two column</p>
+    <p>Render two columns</p>
 <pre><code>&lt;body&gt;
   &lt;main&gt;
   &lt;aside&gt;
@@ -49,7 +49,7 @@
   </section>
   <section>
     <h2>Adjacent elements</h2>
-    <p>Adjacent elements are not expected to affect the layout</p>
+    <p>Render two columns with adjacent elements</p>
 <pre><code>&lt;body&gt;
   ...
   &lt;main&gt;
@@ -58,11 +58,10 @@
 &lt;/body&gt;</code></pre>
   </section>
   <section>
-    <h2>Note</h2>
-    <p>For consistency <strong>always</strong> group <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Inline_text_semantics">inline and text elements</a> under <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Content_sectioning">block sectioning elements</a>. Do not place inline elements directly under <code>body</code>.</p>
-    <p><strong>NO</strong> <code>body>p+p+p</code></p>
-    <p><strong>YES</strong> <code>body>(header>p)+(main>p)+(footer>p)</code></p>
-    <p><strong>YES</strong> <code>body>(section>p)+(section>p)+(section>p)</code></p>
+    <h2>Caveats</h2>
+    <ul>
+      <li>Immediate children of body must be block level elements</li>
+    </ul>
   </section>
 </main>
 

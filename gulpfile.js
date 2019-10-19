@@ -16,6 +16,7 @@ var banner       = ['/** <%= package.repo.url %> */\n\n'];
 var size = fs.statSync('./dist/layout.css').size;
 var i = Math.floor( Math.log(size) / Math.log(1024) );
 var fileSize = ( size / Math.pow(1024, i) ).toFixed(2) * 1 + ' ' + ['B', 'KB', 'MB', 'GB', 'TB'][i];
+pkgJson.fileSize = fileSize;
 
 gulp.task('css', function() {
   return gulp.src('./src/css/layout.css')
@@ -36,7 +37,7 @@ gulp.task('docs', function() {
   return gulp.src('./src/docs/pages/**/*.njk')
     .pipe(nunjucks({
       path: './src/docs/partials',
-      data: { package: pkgJson, fileSize: fileSize }
+      data: { package: pkgJson }
     }))
     .pipe(gulp.dest('./docs'))
     .pipe(browserSync.stream())
