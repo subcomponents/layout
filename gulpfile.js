@@ -10,7 +10,7 @@ var nunjucks     = require('gulp-nunjucks-render');
 var pkgJson      = require('./package.json');
 var browserSync  = require('browser-sync').create();
 var fs           = require('fs');
-var banner       = ['/** <%= package.repo.url %> <%= package.version %> */\n'];
+var banner       = ['/** <%= package.version %> <%= package.repo.url %> */\n'];
 
 // get filezise in bytes
 var size = fs.statSync('./dist/layout.css').size;
