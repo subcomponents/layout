@@ -1,5 +1,10 @@
 # changelog
 
+## 1.4.2
+
+- update gulp
+- fix body content align
+
 ## 1.4.1
 
 - add body-max-width variable

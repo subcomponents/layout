@@ -6,9 +6,10 @@
 }
 
 body {
-  margin: 1rem auto;
-  padding: 0 1rem;
+  margin: 4rem auto;
+  padding: 0 2rem;
   max-width: var(--body-max-width);
+  align-content: flex-start;
 }
 
 @media (min-width: 850px) {
