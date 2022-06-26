@@ -1,36 +1,35 @@
-/** 1.4.2 https://github.com/heyallan/hyper-layout-css */
+/** 1.4.3 https://github.com/heyallan/hyper-layout-css */
 :root {
-  --gap: 1rem;
+  --body-width: 960px;
   --main-width: 70%;
   --aside-width: 30%;
-  --body-max-width: 960px;
+  --gap: 1rem;
 }
 
 body {
   margin: 4rem auto;
   padding: 0 2rem;
-  max-width: 960px;
-  max-width: var(--body-max-width);
-  align-content: flex-start;
+  max-width: var(--body-width);
 }
 
 @media (min-width: 850px) {
+  /* flex container */
   body {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row wrap; /* flex-direction: row & flex-wrap: wrap; */
+    gap: 0 var(--gap);
+    align-content: flex-start;
   }
+  /* generic descentants */
   body > * {
-    flex: 1 1 100%;
+    flex: 1 1 100%; /* grow shrink basis */
     min-width: 0;
   }
-  main {
-    flex-basis: calc(70%);
-    flex-basis: calc(var(--main-width));
+  /* columns */
+  body > main {
+    flex-basis: calc(var(--main-width) - var(--gap));
   }
   body > aside {
-    flex-basis: calc(30%);
-    flex-basis: calc(var(--aside-width));
+    flex-basis: calc(var(--aside-width) - var(--gap));
   }
-  body > aside + main,
-  body > main + aside { padding-left: 1rem; padding-left: var(--gap); }
 }

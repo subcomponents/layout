@@ -12,7 +12,7 @@
   <body>
 
     <header>
-      <h1>@hyper-layout-css <span class="color-primary">v1.4.2</span></h1>
+      <h1>@hyper-layout-css <span class="color-primary">v1.4.3</span></h1>
       <nav>
   <a href="./">Home</a>
   ·
@@ -51,16 +51,16 @@
     <h2>Adjacent elements</h2>
     <p>Render two columns with adjacent elements</p>
 <pre><code>&lt;body&gt;
-  ...
+  <span style="opacity:0.5">&lt;any&gt;</span>
   &lt;main&gt;
   &lt;aside&gt;
-  ...
+  <span style="opacity:0.5">&lt;any&gt;</span>
 &lt;/body&gt;</code></pre>
   </section>
   <section>
     <h2>Caveats</h2>
     <ul>
-      <li>Immediate children of body must be block level elements</li>
+      <li>Immediate descentants of body will be displayed as block level elements</li>
     </ul>
   </section>
 </main>

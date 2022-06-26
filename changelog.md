@@ -1,14 +1,19 @@
 # changelog
 
+## 1.4.3
+
+- remove presetEnv settings
+- use flexbox gap instead of padding
+
 ## 1.4.2
 
 - update gulp
-- fix body content align
+- fix body content alignment
 
 ## 1.4.1
 
 - add body-max-width variable
-- add verson num to export file
+- add version number to exported main file
 
 ## 1.4.0
 
@@ -17,6 +22,6 @@
 
 ## 1.3.0
 
-- sitch to postcss
+- switch to postcss
 - improve docs
 - fix block level elements wrap

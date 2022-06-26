@@ -12,7 +12,7 @@ var banner       = ['/** <%= package.version %> <%= package.repo.url %> */\n'];
 
 function css() {
   return src('./src/css/bundle.css')
-    .pipe(postcss([atImport, presetEnv({ preserve: true })]))
+    .pipe(postcss([atImport]))
     .pipe(rename(pkgJson.keyword + '.css'))
     .pipe(header(banner, { package: pkgJson }))
     .pipe(dest('./dist')) // <-- deliver expanded for dist
