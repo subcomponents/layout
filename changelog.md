@@ -2,7 +2,7 @@
 
 ## 1.4.3
 
-- remove presetEnv settings
+- remove presetEnv from config
 - use flexbox gap instead of padding
 
 ## 1.4.2
