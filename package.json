@@ -4,7 +4,7 @@
   "description": "CSS layout",
   "repository": {
     "type": "git",
-    "url": "https://github.com/heyallan/hyper-layout-css.git"
+    "url": "git+https://github.com/heyallan/hyper-layout-css.git"
   },
   "abstract": "Render one or two column layout according to markup. No classes. Default one column.",
   "keywords": [
