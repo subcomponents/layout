@@ -1,13 +1,13 @@
-# @hyper-layout-css
+# @subcomponents/layout
 
 ![License][LicenseBadgeURL]
 [![Donate][DonateBadgeURL]][DonateURL]
 
-> CSS layout
+> CSS layout library
 
 ## Documentation
 
-Docs and demo: <https://heyallan.github.io/hyper-layout-css>
+Docs and demo: <https://subcomponents.github.io/layout>
 
 ## Contribute
 

@@ -1,12 +1,12 @@
 {
-  "name": "hyper-layout-css",
+  "name": "@subcomponents/layout",
   "version": "1.4.3",
-  "description": "CSS layout",
+  "description": "CSS layout library",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/heyallan/hyper-layout-css.git"
+    "url": "git+https://github.com/subcomponents/layout.git"
   },
-  "abstract": "Render one or two column layout according to markup. No classes. Default one column.",
+  "introduction": "CSS layout library",
   "keywords": [
     "css",
     "layout",
@@ -22,15 +22,14 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/heyallan/hyper-layout-css/issues"
+    "url": "https://github.com/subcomponents/layout/issues"
   },
-  "homepage": "https://heyallan.github.io/hyper-layout-css",
+  "homepage": "https://subcomponents.github.io/layout",
   "main": "dist/layout.min.css",
   "repo": {
-    "url": "https://github.com/heyallan/hyper-layout-css"
+    "url": "https://github.com/subcomponents/layout"
   },
   "keyword": "layout",
-  "scope": "@metacss",
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "gulp": "^4.0.2",
