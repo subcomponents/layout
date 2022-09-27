@@ -1,2 +1,3 @@
 *.html linguist-detectable=false
 *.njk linguist-detectable=false
+*.js linguist-detectable=false
